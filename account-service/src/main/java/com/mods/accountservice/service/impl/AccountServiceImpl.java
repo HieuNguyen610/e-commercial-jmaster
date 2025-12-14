@@ -4,6 +4,7 @@ import com.mods.accountservice.entity.Account;
 import com.mods.accountservice.model.AccountDto;
 import com.mods.accountservice.repository.AccountRepository;
 import com.mods.accountservice.service.AccountService;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @SuppressWarnings("unused")
+@Transactional
 public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
