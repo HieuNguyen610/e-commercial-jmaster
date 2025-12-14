@@ -45,8 +45,8 @@ public class ExceptionController {
         log.error("Exception occurred: {}", ex.getMessage());
 
         Map<String, String> map = new HashMap<>();
-        map.put("code", "405");
-        map.put("error", "Method Not Allowed");
+        map.put("code", "404");
+        map.put("error", "Bad request");
         return map;
     }
 }
