@@ -31,7 +31,7 @@ public class AccountController {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/accounts/${id}")
+    @PutMapping("/accounts/{id}")
     public void update(@PathVariable Long id, @RequestBody AccountDto accountDto) {
         accountDto.setId(id);
         accountService.update(accountDto);
